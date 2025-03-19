@@ -27,9 +27,8 @@ export const ModalBody = ({
     }
   }, [isModalOpen]);
 
-  const modalRef = useRef<HTMLDivElement>(null); // Explicitly typed as HTMLDivElement
+  const modalRef = useRef<HTMLDivElement>(null); 
 
-  // Using outside click hook to close modal when clicked outside
   useOutsideClick(modalRef, () => closeModal());
 
   return (
@@ -163,7 +162,7 @@ const CloseIcon = () => {
 
 // Hook to detect clicks outside of a component.
 export const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
+  ref: React.RefObject<HTMLDivElement | null>, // Allow null type for ref
   callback: (event: MouseEvent | TouchEvent) => void
 ) => {
   useEffect(() => {
