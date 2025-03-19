@@ -1,8 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion"; // Corrected import
 import React, { ReactNode, useEffect, useRef } from "react";
-import { useModal} from "@/lib/modalContext";
+import { useModal } from "@/lib/modalContext";
 import Image from "next/image";
 import { icons } from "@/constants";
 
@@ -27,10 +27,11 @@ export const ModalBody = ({
     }
   }, [isModalOpen]);
 
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null); // Explicitly typed as HTMLDivElement
 
   // Using outside click hook to close modal when clicked outside
   useOutsideClick(modalRef, () => closeModal());
+
   return (
     <AnimatePresence>
       {isModalOpen && (
@@ -47,7 +48,7 @@ export const ModalBody = ({
           className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-150"
         >
           <motion.div
-            ref={modalRef}
+            ref={modalRef} // Ref is now correctly typed
             className={cn(
               "sm:h-[600px] h-[100%] sm:w-[350px] bot-bg border md:rounded-2xl z-500 flex flex-col flex-1 overflow-hidden absolute bottom-0 right-0 sm:bottom-10 sm:right-10 backdrop-blur-md",
               className
@@ -76,18 +77,22 @@ export const ModalBody = ({
             }}
           >
             <div className="flex justify-between items-center py-2 px-5 bot-header">
-                <div className="flex gap-5 items-center justify-center">
-                    <div className="w-10 h-10 bot-icon rounded-full overflow-clip">
-                        <Image src={icons.sura} alt="sura"/>
-                    </div>
-                    <div>
-                        <h2 className="text-md font-bold text-gray-900 dark:text-white ui-sans-semibold">Sura Bot</h2>
-                        <p className="text-sm font-ui-sans-bold ui-sans-light">Ask Me a question</p>
-                    </div>
+              <div className="flex gap-5 items-center justify-center">
+                <div className="w-10 h-10 bot-icon rounded-full overflow-clip">
+                  <Image src={icons.sura} alt="sura" />
                 </div>
-              <CloseIcon />  
+                <div>
+                  <h2 className="text-md font-bold text-gray-900 dark:text-white ui-sans-semibold">
+                    Sura Bot
+                  </h2>
+                  <p className="text-sm font-ui-sans-bold ui-sans-light">
+                    Ask Me a question
+                  </p>
+                </div>
+              </div>
+              <CloseIcon />
             </div>
-            
+
             {children}
           </motion.div>
         </motion.div>
