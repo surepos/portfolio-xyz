@@ -1,6 +1,14 @@
 "use client";
 import Image from "next/image";
 import React, { useState, MouseEvent } from "react";
+import { StaticImageData } from 'next/image';
+
+export interface Skill {
+  id: number;
+  name: string;
+  rate: number;
+  image: StaticImageData; // Use StaticImageData for static images
+}
 import {
   motion,
   useTransform,
@@ -16,7 +24,7 @@ export const AnimatedTooltip = ({
     id: number;
     name: string;
     designation?: string;
-    image: string; // updated to string for Image src
+    image: StaticImageData; // updated to string for Image src
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
