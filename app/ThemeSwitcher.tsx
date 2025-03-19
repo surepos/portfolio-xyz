@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [currentHour, setCurrentHour] = useState(new Date().getHours());
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Allow null or number
+  const [currentHour, setCurrentHour] = useState<number>(new Date().getHours()); // Explicitly define the type as number
 
   const isDayTime = currentHour >= 6 && currentHour < 18;
 
@@ -15,7 +15,7 @@ export function ModeToggle() {
     setTheme(isDayTime ? "light" : "dark");
   }, [isDayTime, setTheme]);
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index: number) => { // Explicitly define the type as number
     setHoveredIndex(index);
   };
 
@@ -23,7 +23,7 @@ export function ModeToggle() {
     setHoveredIndex(null);
   };
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => { // Explicitly define the type as number
     setCurrentHour(index);
     setTheme(index >= 6 && index < 18 ? "light" : "dark");
   };
