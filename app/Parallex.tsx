@@ -22,7 +22,8 @@ const Parallax: React.FC<ParallaxProps> = ({ children, speed = 1, id = 'parallax
   useEffect(() => {
     if (!trigger.current || !target.current) return;
 
-    const y = windowWidth * speed * 0.1;
+    // Provide a default value (e.g., 1024) when windowWidth is undefined
+    const y = (windowWidth || 1024) * speed * 0.1;
 
     const setY = gsap.quickSetter(target.current, 'y', 'px');
 
