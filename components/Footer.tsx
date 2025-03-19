@@ -8,7 +8,7 @@ import { useModal } from "@/lib/modalContext";
 const Footer = () => {
  const { toggleModal} = useModal();
   return (
-    <div className="w-full flex flex-col justify-evenly items-center  pb-30 max-w-6xl mt-0 md:mt-40 mx-auto px-10 z-10 relative">
+    <div className="w-full flex flex-col justify-evenly items-center pb-30 max-w-6xl mt-0 md:mt-40 mx-auto px-8 z-10 relative">
         <div className='flex w-full justify-between'>
 
       <div className="footer-link hidden sm:inline">

@@ -30,12 +30,12 @@ export function TimelineDemo() {
           </p>
           </Parallax> */}
           
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-x-5 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-5 w-full">
             <Parallax
               className={'col-span-1 lg:col-span-3 w-full h-full'}
               speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10 lg:pr-0 lg:pl-20">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
@@ -61,7 +61,7 @@ export function TimelineDemo() {
 
             <Parallax className="col-span-2 w-full h-full" speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
@@ -98,12 +98,12 @@ export function TimelineDemo() {
           </p>
           </Parallax> */}
           
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-x-5 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-5 w-full">
             <Parallax
               className={'col-span-1 lg:col-span-3 w-full h-full'}
               speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10 lg:pr-0 lg:pl-20">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
@@ -129,7 +129,7 @@ export function TimelineDemo() {
 
             <Parallax className="col-span-2 w-full h-full" speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
@@ -178,7 +178,7 @@ export function TimelineDemo() {
          </div>
           </Parallax> */}
           
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-5 lg:gap-x-5 lg:gap-y-5 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-5 lg:gap-y-5 w-full">
           <Parallax className='col-span-1 lg:col-span-5' speed={0}>
           <WobbleCard
           containerClassName="h-[350px] sm:h-[400px]"
@@ -206,7 +206,7 @@ export function TimelineDemo() {
         </Parallax>
           <Parallax className="col-span-2 w-full h-full" speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
@@ -233,7 +233,7 @@ export function TimelineDemo() {
               className={'col-span-1 lg:col-span-3 w-full h-full'}
               speed={0}>
               <WobbleCard
-                containerClassName="h-[350px] sm:h-[400px]"
+                containerClassName="h-[300px] sm:h-[400px]"
                 className="px-4 sm:px-10 lg:pr-0 lg:pl-20">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">

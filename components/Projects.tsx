@@ -57,7 +57,7 @@ const Page = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:grid-rows-2 max-w-7xl mx-auto w-full h-auto pt-15 md:pt-30 px-10"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:grid-rows-2 max-w-7xl mx-auto w-full h-auto pt-15 md:pt-30 px-8"
         >
           <div className="col-span-2 row-span-1 sm:col-span-2 sm:row-span-2 about-grid aspect-square mx-auto sm:w-full sm:aspect-auto sm:h-auto">
             <Image src={icons.sura} alt="MyProfile" />
@@ -96,7 +96,7 @@ const Page = () => {
                     strokeLinecap: 'round',
                   })}
                 >
-                  <div className="text-center text-sm sm:text-md md:text-xl acorn-title">
+                  <div className="text-center text-[12px] sm:text-md md:text-xl acorn-title">
                     <p className="font-bold text-white">{progressValues.progress1}%</p>
                     <p className="font-bold text-white">Frontend</p>
                   </div>
@@ -117,7 +117,7 @@ const Page = () => {
                     strokeLinecap: 'round',
                   })}
                 >
-                  <div className="text-center text-sm sm:text-md md:text-xl acorn-title">
+                  <div className="text-center text-[12px] sm:text-md md:text-xl acorn-title">
                     <p className="font-bold text-white">{progressValues.progress2}%</p>
                     <p className="font-bold acorn-title text-white">Backend</p>
                   </div>
