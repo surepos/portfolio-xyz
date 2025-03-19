@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+
+:root {
+  --font-h1: clamp(3.2rem, .5692rem + 8.238vw, 13.75rem);
+  --font-link: clamp(.875rem, .7985rem + .3265vw, 1.125rem);
+  --font-body: clamp(1rem, .8852rem + .4898vw, 1.375rem);
+  --project-box:clamp(420px, 20vh + 30vw, 580px);
+  --color-opaque: hsla(0, 0%, 100%, .5);
+  --color-primary: hsla(158, 23%, 18%, 1);
+  --color-gradient: linear-gradient( to bottom, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, .013) 9.7%, rgba(17, 17, 17, .049) 18.1%, rgba(17, 17, 17, .104) 25.5%, rgba(17, 17, 17, .175) 31.9%, rgba(17, 17, 17, .259) 37.7%, rgba(17, 17, 17, .352) 43%, rgba(17, 17, 17, .45) 47.9%, rgba(17, 17, 17, .55) 52.8%, rgba(17, 17, 17, .648) 57.7%, rgba(17, 17, 17, .741) 63%, rgba(17, 17, 17, .825) 68.7%, rgba(17, 17, 17, .896) 75%, rgba(17, 17, 17, .951) 82.2%, rgba(17, 17, 17, .987) 90.5%, rgba(17, 17, 17, 1) 100% );
+  --background: rgba(10, 10, 10, 1);
+  --foreground: rgba(255, 255, 255, 1);
+  --text-gradient: linear-gradient(to bottom, #fff, #2573DD);
+  --project-box-bg: rgba(255, 255, 255, 0.05);
+  --project-box-border: rgba(255, 255, 255, 0.3);
+  --secondary-body: rgba(224, 224, 224, 1);
+  --up-color:linear-gradient(80deg, rgba(5, 124, 172, 0), rgba(43, 247, 202, 0));
+  --down-color:linear-gradient(80deg, rgba(5, 124, 172, 0), rgba(43, 247, 202, 0));
+  --left-color:linear-gradient(80deg, rgba(41, 41, 41, 0), rgba(37, 115, 221, 0));
+  --footer-text:rgba(255, 255, 255, 0.6);
+  --footer-title:rgba(255, 255, 255, 1);
+  --line-day: rgba(255, 255, 255, 1);
+  --line-night: rgba(255, 255, 255, 0.2);
+  --project-text-1: rgba(255, 255, 255, 0.8);
+  --project-text-2: rgba(105, 157, 229, 1);
+  --linkPreview-bg: rgba(38, 115, 221, 0.4);
+  --navbar-bg: rgba(50, 50, 50, 0.7);
+  --filler: rgba(255, 255, 255, 0.8);
+  --user-message: #f5f5f5;
+  --user-message-text: rgba(0, 0, 0, 1);
+  --bot-bg: rgba(10, 10, 10, 0.6);
+  --bot-border: #262626;
+  --bot-header: #171717;
+  --bot-message:  #262525;
+  --bot-icon-bg: #45B0FF;
+  --changelog-h2: #fff;
+  --changelog-p: #d4d4d4 ;
+}
+.light:root{
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(0, 0, 0);
+  --text-gradient: linear-gradient(to bottom, rgba(0,0,0,0.87), rgba(0,0,0,0.87));
+  --project-box-bg: rgba(142, 138, 138, 0.2);
+  --project-box-border: rgba(125, 117, 117, 0.5);
+  --secondary-body: rgba(0, 0, 0, 0.8);
+  --up-color:linear-gradient(80deg, rgba(5, 124, 172, 0.3), rgba(43, 247, 202, 0.3));
+  --down-color:linear-gradient(80deg, rgba(172, 44, 5, 0.2), rgba(247, 43, 77, 0.2));
+  --left-color:linear-gradient(80deg, rgba(41, 41, 41, 0.3), rgba(37, 115, 221, 0.3));
+  --footer-text:rgba(0, 0, 0, 0.7);
+  --footer-title:rgba(0, 0, 0, 1);
+  --line-day: rgb(0, 0, 0, 1);
+  --line-night: rgba(0, 0, 0, 0.2);
+  --project-text-1: rgba(0, 0, 0, 0.9);
+  --project-text-2: #026AF9;
+  --linkPreview-bg: rgba(0,0,0,0.8);
+  --navbar-bg: rgba(0,0,0,0.3);
+  --filler: #026AF9;
+  --user-message: #1e76e2;
+  --user-message-text: rgba(255, 255, 255, 1);
+  --bot-message: rgba(255, 255, 255, 0.6);
+  --bot-bg: rgb(84, 80, 80, 0.15);
+  --bot-border: rgba(255, 255, 255, 0);
+  --bot-header: #1e76e2;
+  --bot-icon-bg: #FFCF25;
+  --changelog-h2: #000;
+  --changelog-p: #404040;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-gt), Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.acorn-title {
+  font-family: var(--font-acorn), sans-serif;
+}
+.ui-sans-light {
+  font-family: var(--ui-sans-light), sans-serif;
+}
+
+.ui-sans-semibold {
+  font-family: var(--ui-sans-semibold), sans-serif;
+}
+
+.ui-sans-black {
+  font-family: var(--ui-sans-black), sans-serif;
+}
+.title-size {
+  font-size: var(--font-h1);
+  line-height: 100%;
+}
+
+.body-size {
+  font-size: var(--font-body);
+  line-height: 1.8;
+}
+.navbar{
+  position: fixed;
+  font-size: var(--font-link);
+  background: var(--navbar-bg);
+}
+.gradient-text {
+  background-image: var(--text-gradient);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
+.hero-bg{
+  background-image: var(--color-gradient);
+}
+.project-box{
+  height: var(--project-box);
+}
+.project-box-ui{
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--project-box-border);
+}
+.project-text-one{
+  color: var(--project-text-1);
+}
+.project-text-two{
+  color: var(--project-text-2);
+}
+.hero-p{
+  color: var(--secondary-body);
+}
+
+.aura-hero{
+  height: 100vh;
+  width: 100%;
+
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.7;
+  filter: blur(80px);
+}
+.footer-link{
+  font-size: var(--font-link);
+  color: var(--footer-text);
+}
+.footer-title{
+  color: var(--footer-title);
+}
+.up, .down, .left {
+  position: absolute;
+  filter: blur(80px);
+  animation: randomMove 15s infinite;
+}
+
+.up {
+  height: calc(500px + 20vh); 
+  width: calc(200px + 10vw); 
+  background-image: var(--up-color);
+}
+
+.down {
+  right: 7%;
+  height: calc(700px + 20vh); 
+  width: calc(700px + 10vw); 
+  background-image: var(--down-color);
+}
+
+.left {
+  height: calc(800px + 20vh); 
+  width: calc(500px + 10vw); 
+  background-image: var(--left-color);
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 200px;
+}
+
+.line-wrapper{
+  width: 70px;
+  height: 60px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+
+.line {
+  width: 1px; 
+  height: 50%; 
+  background-color: var(--line-night);
+  transition: height 0.3s ease;
+
+}
+
+.line-wrapper.dayTime .line {
+  background-color: var(--line-day);
+}
+
+.line-wrapper.nightTime .line {
+  background: var(--line-night);
+  height: 30%;
+}
+
+.line-wrapper.currentHour .line {
+  height: 100%;
+  margin-bottom: 20%;
+}
+
+.line-wrapper:hover .line {
+  height: 100%; 
+}
+
+.line-wrapper.adjacent .line {
+  height: 70%; 
+}
+.link-preview-bg{
+  background-color: var(--linkPreview-bg);
+}
+.about-grid{
+  background-color: var(--navbar-bg);
+  border-radius: 10px;
+}
+.base-bg{
+  background-color: var(--background);
+}
+.filler-bg{
+  background-color: var(--filler);
+}
+.bot-bg{
+  background-color: var(--bot-bg);
+  border-color: var(--bot-border);
+}
+.bot-header{
+  background-color: var(--bot-header);
+}
+.user-message-bg{
+  background-color: var(--user-message);
+  color: var(--user-message-text);
+}
+.bot-message{
+  background-color: var(--bot-message);
+  color: var(--footer-title);
+}
+.bot-icon{
+  background-color: var(--bot-icon-bg);
+}
+.changelog-header{
+  color: var(--changelog-h2);
+}
+.changelog-body{
+  color: var(--changelog-p);
+}
+
+
+@keyframes randomMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  70% {
+    transform: translate(var(--random-x), var(--random-y));
+  }
+}
+
+
+
