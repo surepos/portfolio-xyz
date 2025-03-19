@@ -8,21 +8,21 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   
   const randomizePosition = () => {
-    const up = document.querySelector('.up');
-    const down = document.querySelector('.down');
-    const left = document.querySelector('.left');
-
+    const up = document.querySelector('.up') as HTMLElement | null;
+    const down = document.querySelector('.down') as HTMLElement | null;
+    const left = document.querySelector('.left') as HTMLElement | null;
+  
     // Apply random increments to each element
     applyRandomMovement(up, 50, 50);    // Small random movements
     applyRandomMovement(down, 50, 50);  // You can adjust the range
     applyRandomMovement(left, 50, 50);  // depending on the desired effect
   };
 
-  const applyRandomMovement = (element, rangeX, rangeY) => {
+  const applyRandomMovement = (element: HTMLElement | null, rangeX: number, rangeY: number) => {
     if (element) {
       // Get the element's current position
-      const currentX = parseInt(element.style.getPropertyValue('--random-x') || 0);
-      const currentY = parseInt(element.style.getPropertyValue('--random-y') || 0);
+      const currentX = parseInt(element.style.getPropertyValue('--random-x') || '0', 10);
+      const currentY = parseInt(element.style.getPropertyValue('--random-y') || '0', 10);
 
       // Generate small random increments/decrements within a specified range
       const newX = currentX + Math.floor(Math.random() * rangeX - rangeX / 2);

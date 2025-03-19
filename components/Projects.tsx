@@ -28,15 +28,15 @@ const Page = () => {
     const intervals = Object.keys(targetValues).map((key) => {
       return setInterval(() => {
         setProgressValues((prev) => {
-          const newValue = prev[key] + 1;
-          if (newValue >= targetValues[key]) {
+          const newValue = prev[key as keyof typeof progressValues] + 1; // Type assertion
+          if (newValue >= targetValues[key as keyof typeof progressValues]) {
             clearInterval(intervals[Object.keys(targetValues).indexOf(key)]);
           }
           return { ...prev, [key]: newValue };
         });
       }, 10);
     });
-
+  
     return () => intervals.forEach(clearInterval);
   };
 
