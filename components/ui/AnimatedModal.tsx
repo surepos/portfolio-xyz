@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion"; // Corrected import
+import { AnimatePresence, motion } from "framer-motion"; 
 import React, { ReactNode, useEffect, useRef } from "react";
 import { useModal } from "@/lib/modalContext";
 import Image from "next/image";
