@@ -15,7 +15,7 @@ const NextJs = () => {
     return null; 
   }
   return (
-    <div className={`${theme == 'light' ? 'bg-[#CFE2F9]' : 'bg-[#0a0a0a] border-[0.1px] border-white/[0.4]'} w-[25px] sm:w-[35px] h-[25px] sm:h-[35px] flex items-center justify-center rounded-full  p-[2px]`}>
+    <div className={`${theme == 'light' ? 'bg-[#CFE2F9]' : 'bg-[#0a0a0a] border-[0.1px] border-white/[0.4]'} w-[32px] sm:w-[35px] h-[32px] sm:h-[35px] flex items-center justify-center rounded-full  p-[2px]`}>
      <Image src={theme == 'light' ? icons.NextLight : icons.NextJs} alt='Next'/>
     </div>
   );

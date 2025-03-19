@@ -13,7 +13,7 @@ const DB = () => {
         return null; 
       }
   return (
-    <div className={`${theme == 'light' ? 'bg-[#CFE2F9]' : 'bg-[#0a0a0a]'} w-[25px] sm:w-[35px] h-[25px] sm:h-[35px] flex items-center justify-center rounded-full border-[0.1px] border-white/[0.4] p-[6px]`}>
+    <div className={`${theme == 'light' ? 'bg-[#CFE2F9]' : 'bg-[#0a0a0a]'} w-[32px] sm:w-[35px] h-[32px] sm:h-[35px] flex items-center justify-center rounded-full border-[0.1px] border-white/[0.4] p-[6px]`}>
       <svg
         width="100%"
         height="100%"

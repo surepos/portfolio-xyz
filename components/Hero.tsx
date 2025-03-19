@@ -54,7 +54,7 @@ const Hero = () => {
         <Parallax speed={-1}>
           <div className='mt-35 lg:mt-60 mb-10 relative'>
             <Parallax speed={-1}>
-              <div className='absolute -right-20 -top-0 md:top-20 scale-50 md:scale-100'>
+              <div className='absolute -right-16 -top-0 md:top-20 scale-50 md:scale-100'>
                 <Star />
               </div>
             </Parallax>
@@ -74,7 +74,7 @@ const Hero = () => {
               </h1>
             </motion.div>
             <Parallax speed={1}>
-              <div className='absolute -left-20 md:-left-32 md:bottom-5 -bottom-3 scale-50 md:scale-100'>
+              <div className='absolute -left-16 md:-left-32 md:bottom-5 -bottom-3 scale-50 md:scale-100'>
                 <Star />
               </div>
             </Parallax>

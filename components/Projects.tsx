@@ -85,7 +85,7 @@ const Page = () => {
           </div>
           <InView triggerOnce onChange={(inView) => inView && startProgressAnimation()}>
             {({ ref }) => (
-              <div ref={ref} className="col-span-1 about-grid aspect-square p-8">
+              <div ref={ref} className="col-span-1 about-grid aspect-square p-5 sm:p-8">
                 <CircularProgressbarWithChildren
                   value={progressValues.progress1}
                   strokeWidth={9}
@@ -106,7 +106,7 @@ const Page = () => {
           </InView>
           <InView triggerOnce onChange={(inView) => inView && startProgressAnimation()}>
             {({ ref }) => (
-              <div ref={ref} className="col-span-1 about-grid aspect-square p-8">
+              <div ref={ref} className="col-span-1 about-grid aspect-square p-5 sm:p-8">
                 <CircularProgressbarWithChildren
                   value={progressValues.progress2}
                   strokeWidth={9}
