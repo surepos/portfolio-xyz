@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { Timeline } from '@/components/ui/Timeline';
-import { ClimaCast, FluenzY, icons, ListLoom, RC, StopWatch, ThermoSwitch, TicTacToe } from '@/constants';
+import { ClimaCast, CoffeeShop, FluenzY, icons, ListLoom, RC, ThermoSwitch, TicTacToe } from '@/constants';
 import { AnimatedTooltip } from './ui/AnimatedTool';
 import { WobbleCard } from './ui/WobbleCard';
 import Parallax from '@/app/Parallex';
@@ -65,11 +65,11 @@ export function TimelineDemo() {
                 className="px-4 sm:px-10">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
-                    <AnimatedTooltip items={FluenzY} />
+                    <AnimatedTooltip items={CoffeeShop} />
                   </div>
-                  <div className="flex flex-col items-end gap-y-1">
-                    <h2 className="text-xl  md:text-xl lg:text-2xl font-bold project-text-one body-font">
-                      Fluenz
+                  <div className="flex flex-col items-end gap-y-1 w-[90%]">
+                    <h2 className="text-xl md:text-xl lg:text-md font-bold project-text-one body-font text-center">
+                      AI-Powered App
                     </h2>
                     <h2 className="text-xl  md:text-xl lg:text-2xl font-bold project-text-two acorn-title">
                      iOS
@@ -78,7 +78,7 @@ export function TimelineDemo() {
                 </div>
 
                 <Image
-                  src={icons.Fluenz}
+                  src={icons.keffa}
                   alt="Projects"
                   className="rounded-t-xl md:rounded-t-xl w-full"
                 />
@@ -160,23 +160,7 @@ export function TimelineDemo() {
       title: '2023',
       content: (
         <div>
-          {/* <Parallax speed={0}>
-            <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg font-normal mb-4">
-            This was the year I embarked on my first internship, where I honed my skills in web development and built 4 React-based web applications. These projects not only strengthened my technical expertise but also allowed me to deliver impactful solutions. 
-          </p>
-          <div className="mb-8">
-             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-lg">
-               ✅ ClimaCast
-            </div>
-             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-lg">
-               ✅ StopWatch
-            </div>
-             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-lg">
-             ✅ ThermoSwitch
-         </div>
-
-         </div>
-          </Parallax> */}
+      
           
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-10 lg:gap-x-5 lg:gap-y-5 w-full">
           <Parallax className='col-span-1 lg:col-span-5' speed={0}>
@@ -210,20 +194,20 @@ export function TimelineDemo() {
                 className="px-4 sm:px-10">
                 <div className="flex items-center mb-5">
                   <div className="flex flex-row items-center justify-start w-full">
-                    <AnimatedTooltip items={StopWatch} />
+                    <AnimatedTooltip items={FluenzY} />
                   </div>
                   <div className="flex flex-col items-end gap-y-1">
                     <h2 className="text-xl  md:text-xl lg:text-2xl font-bold project-text-one body-font">
-                      StopWatch
+                      Fluenz
                     </h2>
                     <h2 className="text-xl  md:text-xl lg:text-2xl font-bold project-text-two acorn-title">
-                      Utility
+                      iOS
                     </h2>
                   </div>
                 </div>
 
                 <Image
-                  src={icons.stopWatch}
+                  src={icons.Fluenz}
                   alt="Projects"
                   className="rounded-t-xl md:rounded-t-xl w-full"
                 />
