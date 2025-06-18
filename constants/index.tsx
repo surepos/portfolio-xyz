@@ -28,6 +28,10 @@ import N from '@/app/assets/images/N.png'
 import day from '@/app/assets/images/day.png'
 import night from '@/app/assets/images/moon.png'
 import sura from '@/app/assets/images/sura.png'
+import py from '@/app/assets/images/python.png'
+import firebase from '@/app/assets/images/Firebase.png'
+import huggingFace from '@/app/assets/images/huggingface.png'
+import keffa from '@/app/assets/images/keffa.png'
 
 import NextJs from '@/app/assets/images/n copy.png'
 import NextLight from '@/app/assets/images/nexlight.png'
@@ -36,6 +40,7 @@ import Python from '@/components/ui/Python'
 import DB from '@/components/ui/DB'
 import Tailwind from '@/components/ui/Tailwind'
 import TypeScript from '@/components/ui/Typescript'
+
 export const icons = {
     tictactoe,
     tictactoeMobile,
@@ -67,6 +72,10 @@ export const icons = {
     sura,
     NextJs,
     NextLight,
+    py,
+    firebase,
+    huggingFace,
+    keffa
 }
 
 export const TicTacToe = [
@@ -234,6 +243,30 @@ export const RC = [
       id: 4,
       name: "Raspberry",
       image: rasp
+    },
+]
+
+
+export const CoffeeShop = [
+  {
+      id: 1,
+      name: "Python",
+      image: py
+    },
+    {
+      id: 2,
+      name: "React Native",
+      image: reactJs
+    },
+    {
+      id: 3,
+      name: "Firebase",
+      image: firebase
+    },
+    {
+      id: 4,
+      name: "Hugging Face",
+      image: huggingFace
     },
 ]
 
