@@ -284,7 +284,7 @@ export const FooterLinks = [
   {
     id: 3,
     label: "CV",
-    link: "https://tomato-joana-73.tiiny.site",
+    link: "https://scarlet-aurel-26.tiiny.site",
   }
 ]
 
